@@ -1,7 +1,7 @@
-define(['text!./hf.html','lazyload','css!./hf.css'],function(html,lazyload){
-  var hf = {
+define(['text!./riben.html','lazyload','css!./riben.css'],function(html,lazyload){
+  var riben = {
       add:function(){
-        $(".life-content").html(html)
+        $(".direction-content").html(html)
       },
       getItems:function(url){
         $.get(url,function(res){
@@ -38,11 +38,13 @@ define(['text!./hf.html','lazyload','css!./hf.css'],function(html,lazyload){
             effect : "fadeIn"
           });
       },
+
+
       scrollAppend:function(){
         var that = this;
         $(window).on('scroll',function(){
           console.log(location.hash);
-          if(location.hash == '#/life/hf'){
+          if(location.hash == '#/direction/riben'){
             var scrollTop = $(window).scrollTop() + $(window).height();
             $last =  $('.waterfall-content-left .box').last();
             var $lastScroll = $last.offset().top;
@@ -57,7 +59,9 @@ define(['text!./hf.html','lazyload','css!./hf.css'],function(html,lazyload){
               $('#life-menu').removeClass('fixed-menu')
             }
           }
+
         })
+
       }
   }
 
@@ -75,5 +79,5 @@ define(['text!./hf.html','lazyload','css!./hf.css'],function(html,lazyload){
       return item;
   }
 
-  return hf;
+  return riben;
 })

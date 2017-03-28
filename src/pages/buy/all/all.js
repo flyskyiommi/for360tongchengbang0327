@@ -36,7 +36,7 @@ define(['text!./all.html','lazyload','css!./all.css'],function(html,lazyload){
       initWaterFall:function(l){
 
           this.getItems('/getall');
-          // this.scrollAppend();
+          this.scrollAppend();
           $("img.lazy").lazyload({
             effect : "fadeIn"
           });
@@ -45,7 +45,11 @@ define(['text!./all.html','lazyload','css!./all.css'],function(html,lazyload){
         var that = this;
         $(window).on('scroll',function(){
           console.log('sss')
-          var scrollTop = $(window).scrollTop() + $(window).height();
+
+ if(location.hash == '#/buy/all'){
+
+
+     var scrollTop = $(window).scrollTop() + $(window).height();
           $last =  $('.waterfall-content-left .box').last();
           var $lastScroll = $last.offset().top;
 
@@ -58,6 +62,7 @@ define(['text!./all.html','lazyload','css!./all.css'],function(html,lazyload){
           }else {
             $('#life-menu').removeClass('fixed-menu')
           }
+ }
         })
 
       }

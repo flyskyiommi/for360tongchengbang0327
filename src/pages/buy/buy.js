@@ -3,7 +3,7 @@ define(['text!./buy.html',
 'src/pages/buy/buyroute.js',
 'css!./buy.css'],function(html,Swiper){
 
-var life = {
+var buy = {
       add:function(){
         $("#main").html(html)
       },
@@ -23,5 +23,5 @@ var life = {
       }
   }
 
-  return life;
+  return buy;
 })

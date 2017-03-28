@@ -39,5 +39,5 @@ app.get('/getall',function(req,res){
 
 
 app.listen('3002',function(){
-  console.log('server start...')
+  console.log('server start...3002')
 })

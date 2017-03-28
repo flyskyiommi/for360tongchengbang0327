@@ -2,7 +2,7 @@ require.config({
 	baseUrl:'/',
 	paths:{
 		jquery:'lib/jquery-1.12.4.min',
-		waterfall:'lib/jquery.waterfall',
+		// waterfall:'lib/jquery.waterfall',
 		text:'lib/text',
     css:'lib/css.min',
 		rem:'lib/setrem',
@@ -15,7 +15,7 @@ require.config({
 
 require(['jquery','src/myroute.js','rem'],function($,r){
 
-      location.href = '#/life'
+      location.href = '#/buy'
 			// console.log(document.innerWidth)
 
 })
